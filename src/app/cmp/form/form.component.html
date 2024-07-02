@@ -1,3 +1,15 @@
 <section id="form-wrp">
-    <p>EEEEEEEEEEEEEEEEEOOOO</p>
+  <h1>¿Tienes algo que decir?</h1>
+  <div class="form">
+    <label for="title">Titular</label>
+    <input id="title" type="text" required [(ngModel)]="newEntry.title"/>
+    <label for="txt">Todo lo que hay que decir</label>
+    <textarea id="txt" type="text" [(ngModel)]="newEntry.txt" required></textarea>
+    <label for="img">Añade una foto</label>
+    <input id="img" type="file" accept="image/*" (change)="imgHandler($event)" [(ngModel)]="newEntry.img" required/>
+    <label for="date"></label>
+    <input id="date" type="date" [(ngModel)]="newEntry.date" required/>
+    <button (click)="getEntry()">AÑADIR</button>
+    <p>{{msgForm}}</p>
+  </div>
 </section>

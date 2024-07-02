@@ -12,7 +12,6 @@ import { IBlogEntry } from '../../interfaces/i-blog-entry.interface';
 })
 export class BlogComponent {
   arrEntradas: IBlogEntry[] = [
-    //url ..// ??????? 
     {
       title: 'Placeholder 1',
       img: '..//public/imgs/1.jpg',
@@ -26,4 +25,9 @@ export class BlogComponent {
       date: '2024-06-30',
     },
   ];
+
+  AddEntry($event : IBlogEntry) : void {
+    this.arrEntradas.push($event);
+    console.log(this.arrEntradas)
+  }
 }
