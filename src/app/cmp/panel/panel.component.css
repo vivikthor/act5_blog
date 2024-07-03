@@ -1,11 +1,16 @@
 #panel-wrp {
   background-color: rgb(235, 235, 235);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(min-content, 50%);
-  /* grid-template-columns: repeat(auto-fill, minmax(300px, 50vw));
-  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)); */
-  ;
-overflow-y: scroll;
+}
+
+
+@media only screen and (min-width: 600px) {
+  #panel-wrp {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(min-content, 50%);
+    overflow-y: scroll;
+  }
 }

@@ -19,8 +19,10 @@ export class FormComponent {
     date: '',
   };
 
+  // Mensaje del formulario. Por ahora, solo devuelve un error en caso de no tener todos los input rellenados
   msgForm: string = '';
 
+  // Función para recoger la imagen del usuario y poder usarla
   imgHandler(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files[0]) {
@@ -33,6 +35,7 @@ export class FormComponent {
     }
   }
 
+  // Función de recogida y validación de los datos del formulario en una instancia del interfaz. Output
   getEntry(): string {
     let nuevo = this.newEntry;
     if (
@@ -43,6 +46,12 @@ export class FormComponent {
     ) {
       const entry: IBlogEntry = this.newEntry;
       this.EntryToAdd.emit(entry);
+      this.newEntry = {
+        title: '',
+        img: '',
+        txt: '',
+        date: '',
+      };
     } else {
       this.msgForm =
         'Alguno de los campos está incompleto, revisa el formulario';

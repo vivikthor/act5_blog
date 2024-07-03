@@ -11,6 +11,7 @@ import { IBlogEntry } from '../../interfaces/i-blog-entry.interface';
   styleUrl: './blog.component.css',
 })
 export class BlogComponent {
+  // Array de noticias por defecto
   arrEntradas: IBlogEntry[] = [
     {
       title: 'Placeholder 1',
@@ -28,6 +29,5 @@ export class BlogComponent {
 
   AddEntry($event : IBlogEntry) : void {
     this.arrEntradas.push($event);
-    console.log(this.arrEntradas)
   }
 }
