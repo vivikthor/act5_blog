@@ -1,25 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+/* Recursos Externos */
 
 @import url(assets/normalize.css);
 
-:root{
-    --negro: rgb(60, 60, 60);
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* Variables Globales */
+
+:root {
+  --negro: rgb(60, 60, 60);
 }
 
-html, body {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    color: var(--negro);
+html,
+body {
+  font-family: "Nunito Sans",
+    sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  color: var(--negro);
 }
 
-section{
-      padding: 2rem;
-      height: 100vh;
+section {
+  padding: 2rem;
 }
 
 
-/* FLOW */
 article {
   border: 1px solid var(--negro);
   border-radius: 1rem;
@@ -31,6 +35,18 @@ article {
 article img {
   width: 100%;
   max-height: 50vh;
-  border-radius:  .5rem .5rem 0 0;
+  border-radius: .5rem .5rem 0 0;
   object-fit: cover;
+}
+
+
+ /* Estilos para pantallas mayores de 600px */
+@media only screen and (min-width: 600px) {
+  html, body {
+    height: 100%;
+  }
+
+  section {
+    height: 100vh;
+  }
 }

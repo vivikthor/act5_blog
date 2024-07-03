@@ -17,6 +17,7 @@ export class PanelComponent {
     this.printBlog();
   }
 
+  // Función de creación de HTML en base a las noticias recogidas en el array
   printBlog(): string {
     let html = '';
     this.entradas.forEach((entrada: IBlogEntry) => {
